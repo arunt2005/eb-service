@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  eb-service:
+    build: .
+    container_name: eb-service
+    ports:
+      - "1000:1000"
+    environment:
+      SPRING_PROFILES_ACTIVE: default
+    restart: unless-stopped
